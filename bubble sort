@@ -1,0 +1,23 @@
+Bubble sort
+code:
+
+arr = []
+x = int(input("Enter no of elements:"))
+for i in range(0,x):
+    n=int(input("Enter the elements"))
+    arr.append(n)
+print("The array is:{arr}",arr)
+for i in range(0,x):
+    for j in range(i+1,x):
+        if arr[i]>arr[j]:
+            temp=arr[i]
+            arr[i]=arr[j]
+            arr[j]=temp
+print("The sort no:", arr)
+
+output:
+Enter no of elements:2
+Enter the elements3
+Enter the elements1
+The array is:{arr} [3, 1]
+The sort no: [1, 3]

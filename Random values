@@ -1,0 +1,33 @@
+Random values
+
+code:-
+
+import numpy as np
+n=np.random.randint(10,size=(2,2))
+print(n)
+
+print("determinant")
+print(np.linalg.det(n))
+
+print("inverse")
+print(np.linalg.inv(n))
+
+print("matrix Rank")
+print(np.linalg.matrix_rank(n))
+
+print("Transpose as 1-dimensional array:")
+print(n.T.flatten())
+
+output:-
+
+[[1 8]
+ [9 8]]
+determinant
+-64.00000000000003
+inverse
+[[-0.125     0.125   ]
+ [ 0.140625 -0.015625]]
+matrix Rank
+2
+Transpose as 1-dimensional array:
+[1 9 8 8]

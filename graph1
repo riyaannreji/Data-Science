@@ -1,0 +1,14 @@
+import pandas as pd
+from sklearn.linear_model import LinearRegression
+df = pd.read_csv("company.csv")
+print(df.head())
+X = df[['Gender', 'Age', 'Annual Income']]
+y = df['Spending Score']
+X['Gender'] = X['Gender'].apply(lambda g: 1 if g == 'Male' else 0)
+model = LinearRegression()
+model.fit(X, y)
+print("Model coefficients:", model.coef_)
+print("Intercept:", model.intercept_)
+input_instance = [[1, 24, 29]]
+predicted_score = model.predict(input_instance)
+print("Predicted Spending Score:", predicted_score)v
